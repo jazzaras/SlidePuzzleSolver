@@ -1,7 +1,7 @@
 from pprint import pprint 
 import copy
 
-inital = [
+initial = [
     [6,7,3],
     [8,"",5],
     [4,2,1],
@@ -20,7 +20,7 @@ def printSP(path):
             print(row)
     
 visited = []
-nextToVisit = [[0,inital]]
+nextToVisit = [[0,initial]]
 
 def switch(state, xb, yb, x, y):
     state = copy.deepcopy(state)
