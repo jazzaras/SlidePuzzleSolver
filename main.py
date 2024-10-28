@@ -7,6 +7,7 @@ inital = [
     [4,2,1],
 ]
 
+precesion = 10
 
 def printS(state):
     for row in state:
@@ -106,7 +107,7 @@ while (1):
         if nextPath == None:
             nextPath = copy.deepcopy(path)
             continue
-        elif (heusticFunction(path[-1]) + (path[0] / 4)) < (heusticFunction(nextPath[-1]) + (nextPath[0] / 4)):
+        elif (heusticFunction(path[-1]) + (path[0] / precesion)) < (heusticFunction(nextPath[-1]) + (nextPath[0] / precesion)):
             nextPath =  copy.deepcopy(path)
 
     # printS(nextPath[-1])
